@@ -46,6 +46,37 @@
           color: white; /* Memberikan warna putih pada ikon pencarian */
           font-size: 20px; /* Menyesuaikan ukuran ikon pencarian */
       }
+
+      /* Tambahkan gaya CSS untuk responsivitas formulir */
+      #search input[type="text"] {
+            width: 100%; /* Form akan mengisi lebar container */
+            max-width: 200px; /* Maksimum lebar form */
+            transition: max-width 0.4s ease; /* Animasi perubahan lebar */
+        }
+
+        /* Tambahkan gaya CSS untuk toggle dropdown pada navigasi */
+        .toggle-dropdown {
+            transition: transform 0.3s ease; /* Animasi perubahan ikon */
+        }
+
+        /* Tambahkan gaya CSS untuk tampilan mobile */
+        @media only screen and (max-width: 768px) {
+            .container-xl {
+                padding: 0 10px; /* Padding lebih sedikit pada tampilan mobile */
+            }
+            #search input[type="text"] {
+                max-width: 150px; /* Perkecil lebar form pada tampilan mobile */
+            }
+            .toggle-dropdown {
+                transform: rotate(180deg); /* Putar ikon dropdown */
+            }
+            .navmenu ul ul {
+                display: none; /* Sembunyikan submenu pada tampilan mobile */
+            }
+            .navmenu ul li.dropdown.active ul {
+                display: block; /* Tampilkan submenu yang aktif */
+            }
+        }
   </style>
 </head>
 
